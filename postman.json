@@ -1,0 +1,159 @@
+{
+  "collection": {
+    "info": {
+      "_postman_id": "f0bb0da8-d007-4c5a-914c-a4c223d0b65a",
+      "name": "Assignment",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "updatedAt": "2023-05-26T19:13:08.000Z",
+      "uid": "21295940-f0bb0da8-d007-4c5a-914c-a4c223d0b65a"
+    },
+    "item": [
+      {
+        "name": "Create Product",
+        "id": "a9f20cb6-3a71-425a-9a88-961fe3a5d8ad",
+        "protocolProfileBehavior": { "disableBodyPruning": true },
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "formdata",
+            "formdata": [
+              { "key": "productName", "value": "Watch", "type": "text" },
+              {
+                "key": "productImage",
+                "type": "file",
+                "src": "/C:/Users/User/OneDrive/Pictures/Screenshots/Screenshot (1).png"
+              },
+              { "key": "description", "value": "Testing", "type": "text" }
+            ]
+          },
+          "url": {
+            "raw": "localhost:3000/create-product",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["create-product"]
+          }
+        },
+        "response": [],
+        "uid": "21295940-a9f20cb6-3a71-425a-9a88-961fe3a5d8ad"
+      },
+      {
+        "name": "Get Product",
+        "id": "004ad401-648c-479a-9447-bf1cd5a3f75a",
+        "protocolProfileBehavior": { "disableBodyPruning": true },
+        "request": {
+          "method": "GET",
+          "header": [],
+          "body": {
+            "mode": "raw",
+            "raw": "",
+            "options": { "raw": { "language": "json" } }
+          },
+          "url": {
+            "raw": "localhost:3000/get-product/",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["get-product", ""]
+          }
+        },
+        "response": [],
+        "uid": "21295940-004ad401-648c-479a-9447-bf1cd5a3f75a"
+      },
+      {
+        "name": "Get Product By Id",
+        "id": "987cb877-4c47-484d-b49b-0e515c5b3c19",
+        "protocolProfileBehavior": { "disableBodyPruning": true },
+        "request": {
+          "method": "GET",
+          "header": [
+            {
+              "key": "x-Api-key",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDY4ZTNlYzgzY2M1NWQzODgwZWM0ZmMiLCJlbWFpbCI6ImprdHlhZ2lAZ21haWxsLmNvbSIsInBhc3N3b3JkIjoiSmt0eWFnaUAxMjQiLCJpYXQiOjE2ODQ1OTU3MTV9.1rM3_1i69RycSz3bCk-IRhM0ERyR46Wsd2El9ORNr1c",
+              "type": "text"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "",
+            "options": { "raw": { "language": "json" } }
+          },
+          "url": {
+            "raw": "localhost:3000/get-product/609605",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["get-product", "609605"]
+          }
+        },
+        "response": [],
+        "uid": "21295940-987cb877-4c47-484d-b49b-0e515c5b3c19"
+      },
+      {
+        "name": "Update Product",
+        "id": "d81f8c55-ca3b-4d0c-8b0c-7ca43824ee2c",
+        "protocolProfileBehavior": { "disableBodyPruning": true },
+        "request": {
+          "method": "PUT",
+          "header": [
+            {
+              "key": "x-api-key",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDY4ZTNlYzgzY2M1NWQzODgwZWM0ZmMiLCJlbWFpbCI6ImprdHlhZ2lAZ21haWxsLmNvbSIsInBhc3N3b3JkIjoiSmt0eWFnaUAxMjQiLCJpYXQiOjE2ODQ1OTU3MTV9.1rM3_1i69RycSz3bCk-IRhM0ERyR46Wsd2El9ORNr1c",
+              "type": "text"
+            }
+          ],
+          "body": {
+            "mode": "formdata",
+            "formdata": [
+              { "key": "productName", "value": "Phone", "type": "text" },
+              { "key": "isActive", "value": "false", "type": "text" },
+              { "key": "", "value": "", "type": "text", "disabled": true }
+            ]
+          },
+          "url": {
+            "raw": "localhost:3000/update-product/609605",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["update-product", "609605"],
+            "query": [
+              {
+                "key": "perMonthPrice",
+                "value": "299",
+                "type": "text",
+                "disabled": true
+              }
+            ]
+          }
+        },
+        "response": [],
+        "uid": "21295940-d81f8c55-ca3b-4d0c-8b0c-7ca43824ee2c"
+      },
+      {
+        "name": "Delete Product",
+        "id": "ddde08a7-6738-4529-8dde-d21b0dc5d307",
+        "protocolProfileBehavior": { "disableBodyPruning": true },
+        "request": {
+          "method": "DELETE",
+          "header": [
+            {
+              "key": "x-api-key",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDZlZjEzZDk5ZmQ0OWFhNjhkZGJlMDQiLCJlbWFpbCI6ImprdHNpQGdtYWlsbC5jb20iLCJwYXNzd29yZCI6IkprdHlhZ2lAMTI0IiwiaWF0IjoxNjg1MTI5NTE4fQ.H9xAz4ezznfHh_xq1wLzpVhLfOTOOncbUxonAitkblw",
+              "type": "text"
+            }
+          ],
+          "body": {
+            "mode": "raw",
+            "raw": "",
+            "options": { "raw": { "language": "json" } }
+          },
+          "url": {
+            "raw": "localhost:3000/delete-product/609605",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["delete-product", "609605"]
+          }
+        },
+        "response": [],
+        "uid": "21295940-ddde08a7-6738-4529-8dde-d21b0dc5d307"
+      }
+    ]
+  }
+}
